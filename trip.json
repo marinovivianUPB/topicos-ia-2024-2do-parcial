@@ -1,0 +1,34 @@
+[
+    {
+        "trip_type": "FLIGHT",
+        "date": "2023-12-05",
+        "departure": "Oruro",
+        "destination": "Cochabamba",
+        "cost": 554,
+        "reservation_type": "TripReservation"
+    },
+    {
+        "checkin_date": "2023-12-05",
+        "checkout_date": "2023-12-15",
+        "hotel_name": "El Lucero",
+        "city": "Oruro",
+        "cost": 990,
+        "reservation_type": "HotelReservation"
+    },
+    {
+        "reservation_time": "2023-12-07T20:00:00",
+        "restaurant": "Gustu",
+        "city": "La Paz",
+        "dish": "not specified",
+        "cost": 29,
+        "reservation_type": "RestaurantReservation"
+    },
+    {
+        "trip_type": "FLIGHT",
+        "date": "2024-01-02",
+        "departure": "Cochabamba",
+        "destination": "Dallas",
+        "cost": 401,
+        "reservation_type": "TripReservation"
+    }
+]

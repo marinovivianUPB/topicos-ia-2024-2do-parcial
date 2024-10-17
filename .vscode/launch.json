@@ -1,0 +1,21 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Api debugger",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "fastapi",
+            "args": ["dev", "ai_assistant/api.py"]
+        },
+        {
+            "name": "Chatbot Debugger",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "ai_assistant.chatbot"
+        }
+    ]
+}
