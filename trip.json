@@ -30,5 +30,21 @@
         "destination": "Dallas",
         "cost": 401,
         "reservation_type": "TripReservation"
+    },
+    {
+        "reservation_time": "2024-10-19T10:00:00",
+        "restaurant": "Texas",
+        "city": "La Paz",
+        "dish": "not specified",
+        "cost": 457,
+        "reservation_type": "RestaurantReservation"
+    },
+    {
+        "reservation_time": "2024-10-20T10:00:00",
+        "restaurant": "Texas",
+        "city": "La Paz",
+        "dish": "alitas",
+        "cost": 337,
+        "reservation_type": "RestaurantReservation"
     }
 ]
