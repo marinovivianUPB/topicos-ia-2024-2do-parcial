@@ -113,7 +113,7 @@ def trip_summary() -> str:
 
     for activity in trip_data:
         city = activity.get('city', activity.get('departure', 'unknown'))
-        date = activity.get('date', activity.get('checkin_date', 'unknown'))
+        date = activity.get('date', activity.get('checkin_date', activity.get('reservation_time', 'unknown')))
         cost = activity.get('cost', 0)
         total_cost += cost
 
@@ -143,7 +143,7 @@ trip_summary_tool = FunctionTool.from_defaults(fn=trip_summary, return_direct=Fa
 
 def get_wikipedia_page(lookup_term: str) -> str:
     user_agent = 'SegundoParcial/1.0 (https://www.upb.edu/)'
-    wiki_wiki = wikipediaapi.Wikipedia('en')
+    wiki_wiki = wikipediaapi.Wikipedia(user_agent,'en')
     page = wiki_wiki.page(lookup_term)
     
     if page.exists():

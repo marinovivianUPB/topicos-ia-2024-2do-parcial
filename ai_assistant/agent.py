@@ -10,7 +10,6 @@ from ai_assistant.tools import (
     wikipedia_tool
 )
 
-
 class TravelAgent:
     def __init__(self, system_prompt: PromptTemplate | None = None):
         self.agent = ReActAgent.from_tools(

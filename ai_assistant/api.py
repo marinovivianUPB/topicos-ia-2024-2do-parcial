@@ -10,12 +10,13 @@ from ai_assistant.tools import (
     reserve_restaurant
 )
 import json
+from ai_assistant.prompts import agent_prompt_tpl
 
 SETTINGS = get_agent_settings()
 
 
 def get_agent() -> ReActAgent:
-    return TravelAgent().get_agent()
+    return TravelAgent(agent_prompt_tpl).get_agent()
 
 
 app = FastAPI(title="AI Agent")

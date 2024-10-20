@@ -46,5 +46,21 @@
         "dish": "alitas",
         "cost": 337,
         "reservation_type": "RestaurantReservation"
+    },
+    {
+        "checkin_date": "2023-12-05",
+        "checkout_date": "2023-12-15",
+        "hotel_name": "El Lucero",
+        "city": "Oruro",
+        "cost": 875,
+        "reservation_type": "HotelReservation"
+    },
+    {
+        "checkin_date": "2024-10-20",
+        "checkout_date": "2024-10-30",
+        "hotel_name": "Viru Viru",
+        "city": "Santa Cruz",
+        "cost": 775,
+        "reservation_type": "HotelReservation"
     }
 ]
