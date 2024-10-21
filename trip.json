@@ -62,5 +62,29 @@
         "city": "Santa Cruz",
         "cost": 775,
         "reservation_type": "HotelReservation"
+    },
+    {
+        "trip_type": "FLIGHT",
+        "date": "2024-10-31",
+        "departure": "La Paz",
+        "destination": "Santa Cruz",
+        "cost": 202,
+        "reservation_type": "TripReservation"
+    },
+    {
+        "trip_type": "BUS",
+        "date": "2024-11-01",
+        "departure": "Santa Cruz",
+        "destination": "La Paz",
+        "cost": 81,
+        "reservation_type": "TripReservation"
+    },
+    {
+        "checkin_date": "2024-10-20",
+        "checkout_date": "2024-10-22",
+        "hotel_name": "Presidente",
+        "city": "La Paz",
+        "cost": 702,
+        "reservation_type": "HotelReservation"
     }
 ]

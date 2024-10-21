@@ -2,7 +2,7 @@ from fastapi import FastAPI, Depends, Query
 from llama_index.core.agent import ReActAgent
 from ai_assistant.agent import TravelAgent
 from ai_assistant.config import get_agent_settings
-from ai_assistant.models import AgentAPIResponse, RecommendationRequest, ReservationRequest, HotelReservationRequest,RestaurantReservationRequest
+from ai_assistant.models import AgentAPIResponse, RecommendationRequest, ReservationRequest, HotelReservationRequest,RestaurantReservationRequest, TripReservation
 from ai_assistant.tools import (
     reserve_flight,
     reserve_bus,
@@ -35,9 +35,9 @@ def recommend_places(
     notes: list[str] = Query(None), agent: ReActAgent = Depends(get_agent)
 ):
     if notes:
-        prompt = f"Recommend places to visit in the {city} in Bolivia with the following notes: {notes}"
+        prompt = f"Recommend places to visit in the {city} in Bolivia with the following notes: {notes}. Only return places, not restaurants or hotels or activities."
     else:
-        prompt = f"Recommend places to visit in the {city} in Bolivia."
+        prompt = f"Recommend places to visit in the {city} in Bolivia. Only return places, not restaurants or hotels or activities."
     return AgentAPIResponse(status="OK", agent_response=str(agent.chat(prompt)))
 
 @app.get("/recommendations/hotels")
@@ -64,10 +64,10 @@ def recommend_activities(
 
 
 @app.post("/reservations/flight")
-def reserve_flight_api(request: RecommendationRequest = Query(...)):
+def reserve_flight_api(request: ReservationRequest = Query(...)):
     reservation = reserve_flight(
-        request.origin,
         request.destination,
+        request.origin,
         request.date)
     return AgentAPIResponse(status="OK", agent_response=str(reservation))
 
